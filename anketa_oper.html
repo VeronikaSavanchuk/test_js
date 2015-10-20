@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="test_jsb">
+		<meta name="keywords" content="test_jsb">
+		<title>Задание №2-2</title>
+	</head>
+		<body>
+			<script>
+				var age_rez,age_day,sex_rez,retirement,anketa;
+				var fio = prompt("Ваше ФИО", "");
+				var age = prompt("Ваш возраст, лет", "");
+				var sex = prompt("Ваш пол. Введите w-женский, m-мужской", "");
+				var reg = /^[а-яА-ЯёЁa-zA-Z. ]+$/;
+				var rez = reg.test(fio);
+				
+				fio_rez = rez ? 'ФИО: '+ fio : 'ФИО: Не коректный ввод';
+				age_rez = (age === 1 || age <=100 ) ? 'Возраст, лет:  '+ age  : 'Возраст, лет: Не коректный ввод';
+				age_day = (age === 1 || age <=100 ) ? 'Возраст, дней:  ' + age * 365 : 'Возраст, дней: Не коректный ввод возраста';
+				sex_rez = (sex === 'w') ?  'Пол: женский' : (sex === 'm') ?  'Пол: мужской' : 'Пол: Не коректный ввод';
+				retirement = (sex === 'w') ?  'Пенсионный возраст: 55' : (sex === 'm') ?  'Пенсионный возраст: 60' : 'Пенсионный возраст: Не коректный ввод в поле "пол"';
+				
+				anketa = fio_rez + '\n' + age_rez + '\n' + age_day + '\n' + sex_rez + '\n' + retirement;
+				alert(anketa);
+			</script>
+		</body>
+</html>
