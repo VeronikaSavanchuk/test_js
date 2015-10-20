@@ -12,7 +12,7 @@
 			function addWords() {
 				var arrayWords = prompt('Введите предложение', '');
 				var arr = arrayWords.split(' ');
-				alert(arr.sort(lensort).slice(0,3));
+				alert(arr.sort(lensort)[0] + ';' + arr.sort(lensort)[1] + ';' + arr.sort(lensort)[2]);
 			};
 			function lensort(a,b){
 				var s1 = "" + a; 
