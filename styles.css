@@ -72,9 +72,11 @@ p {
 .b-aside {
 	list-style: square inside;
 }
+.b-aside li{
+	padding:10px 0;
+}
+
 .b-aside li a{
-	padding:10px 10px 10px 20px;
-	display:block;
 	color: #000;
 }
 .b-aside li a:hover{
